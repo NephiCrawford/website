@@ -35,14 +35,14 @@
         <h2>Our Team</h2>
         <div class="team-grid">
             <div class="team-member">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Nephi" alt="Nephi Crawford">
+                <img src="images/nephi.jpg" alt="Nephi Crawford">
                 <h3>Nephi Crawford</h3>
                 <p class="position">Owner & Lead Technician</p>
                 <p class="bio">EPA Certified technician with 5 years of experience.</p>
                 <p class="email">Nephi@HighMountainMechanical.net</p>
             </div>
             <div class="team-member">
-                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Hannah" alt="Hannah Crawford">
+                <img src="images/hannah.jpg" alt="Hannah Crawford">
                 <h3>Hannah Crawford</h3>
                 <p class="position">Office Manager</p>
                 <p class="bio">Handling office operations, HR, scheduling, and billing.</p>
