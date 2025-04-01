@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /index.php
+Allow: /about.php
+Allow: /services.php
+Allow: /contact.php
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Disallow: /process_contact.php
+Disallow: /views/
+
+Sitemap: https://highmountainmechanical.net/sitemap.xml 
