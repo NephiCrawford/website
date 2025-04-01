@@ -26,7 +26,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://highmountainmechanical.net">
     
-    <link rel="stylesheet" href="css/style.css?v=1.0.6">
+    <link rel="stylesheet" href="css/style.css?v=1.4.07">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Schema.org Structured Data -->
@@ -51,8 +51,8 @@
             "longitude": "-75.6024"
         },
         "url": "https://highmountainmechanical.net",
-        "telephone": "+15702660652",
-        "email": "info@HighMountainMechanical.net",
+        "telephone": "+15705070201",
+        "email": "high.mountain.mechanical2025@gmail.com",
         "priceRange": "$$",
         "areaServed": {
             "@type": "City",
@@ -136,6 +136,8 @@
         </nav>
     </header>
 
+    <div class="mobile-menu-overlay"></div>
+
     <main id="main-content">
         <?php include "views/{$view}.php"; ?>
     </main>
@@ -144,8 +146,8 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Contact Us</h3>
-                <p><i class="fas fa-phone"></i> (570) 266-0652</p>
-                <p><i class="fas fa-envelope"></i> info@HighMountainMechanical.net</p>
+                <p><i class="fas fa-phone"></i> (570) 507-0201</p>
+                <p><i class="fas fa-envelope"></i> high.mountain.mechanical2025@gmail.com</p>
                 <p><i class="fas fa-location-dot"></i> 526 Delaware Ave Apt 1</p>
                 <p>Olyphant, PA 18447</p>
             </div>
@@ -170,6 +172,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=1.1.6"></script>
+    <script src="js/main.js?v=1.4.07"></script>
 </body>
 </html> 

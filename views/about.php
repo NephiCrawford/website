@@ -35,18 +35,24 @@
         <h2>Our Team</h2>
         <div class="team-grid">
             <div class="team-member">
-                <img src="images/nephi.jpg" alt="Nephi Crawford">
-                <h3>Nephi Crawford</h3>
-                <p class="position">Owner & Lead Technician</p>
-                <p class="bio">EPA Certified technician with 5 years of experience.</p>
-                <p class="email">Nephi@HighMountainMechanical.net</p>
+                <img src="images/nephi.jpg" alt="Nephi Crawford" class="team-member-image">
+                <div class="team-info">
+                    <h3>Nephi Crawford</h3>
+                    <p class="position">Owner & Lead Technician</p>
+                    <p class="bio">5 years of experience, EPA certified, dedicated to quality service.</p>
+                    <p class="email"><i class="fas fa-envelope"></i> high.mountain.mechanical2025@gmail.com</p>
+                    <p class="phone"><i class="fas fa-phone"></i> (570) 507-0201</p>
+                </div>
             </div>
             <div class="team-member">
-                <img src="images/hannah.jpg" alt="Hannah Crawford">
-                <h3>Hannah Crawford</h3>
-                <p class="position">Office Manager</p>
-                <p class="bio">Handling office operations, HR, scheduling, and billing.</p>
-                <p class="email">Hannah@HighMountainMechanical.net</p>
+                <img src="images/hannah.jpg" alt="Hannah Crawford" class="team-member-image">
+                <div class="team-info">
+                    <h3>Hannah Crawford</h3>
+                    <p class="position">Office Manager</p>
+                    <p class="bio">Handles scheduling, billing, and customer service with a smile.</p>
+                    <p class="email"><i class="fas fa-envelope"></i> high.mountain.mechanical2025@gmail.com</p>
+                    <p class="phone"><i class="fas fa-phone"></i> (570) 266-0652</p>
+                </div>
             </div>
         </div>
     </div>
