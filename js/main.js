@@ -33,7 +33,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scroll for anchor links
+    // Handle view switching
+    const mainContent = document.getElementById('main-content');
+    const links = document.querySelectorAll('a[href^="?view="]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const view = href.split('=')[1];
+            
+            // Update active state
+            menuLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Update URL without page reload
+            window.history.pushState({}, '', href);
+            
+            // Load new view content
+            fetch(`views/${view}.php`)
+                .then(response => response.text())
+                .then(html => {
+                    mainContent.innerHTML = html;
+                    // Scroll to top of content
+                    mainContent.scrollIntoView({ behavior: 'smooth' });
+                })
+                .catch(error => console.error('Error loading view:', error));
+        });
+    });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const view = urlParams.get('view') || 'home';
+        
+        // Update active state
+        menuLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `?view=${view}`) {
+                link.classList.add('active');
+            }
+        });
+        
+        // Load view content
+        fetch(`views/${view}.php`)
+            .then(response => response.text())
+            .then(html => {
+                mainContent.innerHTML = html;
+                mainContent.scrollIntoView({ behavior: 'smooth' });
+            })
+            .catch(error => console.error('Error loading view:', error));
+    });
+
+    // Smooth scroll for anchor links within the current view
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
