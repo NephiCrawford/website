@@ -6,20 +6,19 @@
 <section class="contact-content">
     <div class="contact-info">
         <div class="info-card">
+            <i class="fas fa-location-dot"></i>
+            <h3>Address</h3>
+            <p>526 Delaware Ave Apt 1<br>Olyphant, PA 18447</p>
+        </div>
+        <div class="info-card">
             <i class="fas fa-phone"></i>
             <h3>Phone</h3>
-            <p>(570) 266-0652</p>
+            <p>(570) 507-0201</p>
         </div>
         <div class="info-card">
             <i class="fas fa-envelope"></i>
             <h3>Email</h3>
-            <p>info@HighMountainMechanical.net</p>
-        </div>
-        <div class="info-card">
-            <i class="fas fa-location-dot"></i>
-            <h3>Address</h3>
-            <p>526 Delaware Ave Apt 1</p>
-            <p>Olyphant, PA 18447</p>
+            <p>high.mountain.mechanical2025@gmail.com</p>
         </div>
     </div>
 
