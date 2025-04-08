@@ -1,10 +1,3 @@
-<?php
-    $view = isset($_GET['view']) ? $_GET['view'] : 'home';
-    $valid_views = ['home', 'services', 'about', 'contact'];
-    if (!in_array($view, $valid_views)) {
-        $view = 'home';
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +13,7 @@
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="High Mountain Mechanical - Professional HVAC Services">
     <meta property="og:description" content="Professional HVAC services in Olyphant, PA. Licensed, bonded, and EPA certified technicians.">
-    <meta property="og:image" content="https://highmountainmechanical.net/images/mountain.jpg">
+    <meta property="og:image" content="https://highmountainmechanical.net/images/mountain.png">
     <meta property="og:url" content="https://highmountainmechanical.net">
     
     <!-- Canonical URL -->
@@ -35,7 +28,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "High Mountain Mechanical",
-        "image": "https://highmountainmechanical.net/images/mountain.jpg",
+        "image": "https://highmountainmechanical.net/images/mountain.png",
         "description": "Professional HVAC services in Olyphant, PA. Licensed, bonded, and EPA certified technicians offering comprehensive heating, cooling, and maintenance services.",
         "address": {
             "@type": "PostalAddress",
@@ -121,14 +114,14 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="images/mountain.jpg" alt="High Mountain Mechanical Logo" class="logo-image">
+                <img src="images/mountain.png" alt="High Mountain Mechanical Logo" class="logo-image">
                 <h1>High Mountain Mechanical</h1>
             </div>
             <div class="nav-links">
-                <a href="?view=home" class="<?php echo $view === 'home' ? 'active' : ''; ?>">Home</a>
-                <a href="?view=services" class="<?php echo $view === 'services' ? 'active' : ''; ?>">Services</a>
-                <a href="?view=about" class="<?php echo $view === 'about' ? 'active' : ''; ?>">About</a>
-                <a href="?view=contact" class="<?php echo $view === 'contact' ? 'active' : ''; ?>">Contact</a>
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html" class="">Services</a>
+                <a href="about.html" class="">About</a>
+                <a href="contact.html" class="">Contact</a>
             </div>
             <div class="mobile-menu">
                 <i class="fas fa-bars"></i>
@@ -139,7 +132,55 @@
     <div class="mobile-menu-overlay"></div>
 
     <main id="main-content">
-        <?php include "views/{$view}.php"; ?>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Your Comfort, Our Priority</h1>
+                <p>Professional HVAC services for homes and businesses</p>
+                <a href="contact.html" class="cta-button">Get a Free Quote</a>
+            </div>
+        </section>
+
+        <section class="services-preview">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Air Conditioning</h3>
+                    <p>Installation, repair, and maintenance of all AC systems</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Heating</h3>
+                    <p>Furnace installation and repair services</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Maintenance</h3>
+                    <p>Regular maintenance to keep your systems running efficiently</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose High Mountain Mechanical?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <h3>Licensed & Bonded</h3>
+                    <p>Fully licensed and bonded for your peace of mind</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-certificate"></i>
+                    <h3>EPA Certified</h3>
+                    <p>Certified technicians with 5 years of experience</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Competitive Pricing</h3>
+                    <p>Fair and transparent pricing for all services</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -168,10 +209,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> High Mountain Mechanical. All rights reserved.</p>
+            <p>&copy; <span id="current-year">2024</span> High Mountain Mechanical. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="js/main.js?v=1.4.07"></script>
+    <script>
+        // Update the year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html> 
