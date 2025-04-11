@@ -864,13 +864,14 @@ footer {
 
 .about-team .team-contact {
     background-color: #f8f9fa !important;
-    padding: 1.25rem !important;
+    padding: 1.25rem 1.5rem !important;
     border-radius: 12px !important;
     margin-top: 1rem !important;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
     border-left: 4px solid #3498db !important;
     position: relative !important;
     overflow: hidden !important;
+    text-align: left !important;
 }
 
 .about-team .team-contact::before {
@@ -901,7 +902,7 @@ footer {
     align-items: center !important;
     font-size: 0.95rem !important;
     transition: all 0.3s ease !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
 }
 
 .about-team .team-contact p:last-child {
