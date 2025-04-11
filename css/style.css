@@ -848,4 +848,383 @@ main {
 
 .mobile-menu-overlay.active {
     display: block;
+}
+
+/* Reviews Page Styles */
+.reviews-page {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.reviews-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.overall-rating {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.rating-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.rating-stars {
+    color: #ffc107;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating-count {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.service-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.category-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.category-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.category-stars {
+    color: #ffc107;
+    font-size: 1.2rem;
+}
+
+.category-count {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.review-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.review-item::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 4rem;
+    color: rgba(44, 62, 80, 0.1);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+}
+
+.reviewer-info h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.review-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.review-content {
+    color: #495057;
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.review-service {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    color: #6c757d;
+    font-size: 0.9rem;
+    padding-left: 1rem;
+}
+
+.review-service i {
+    color: #3498db;
+}
+
+.leave-review {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.leave-review h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.leave-review p {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.review-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+}
+
+.rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.rating label:last-child {
+    position: static;
+}
+
+.rating label:nth-child(1) {
+    z-index: 5;
+}
+
+.rating label:nth-child(2) {
+    z-index: 4;
+}
+
+.rating label:nth-child(3) {
+    z-index: 3;
+}
+
+.rating label:nth-child(4) {
+    z-index: 2;
+}
+
+.rating label:nth-child(5) {
+    z-index: 1;
+}
+
+.rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.rating label .icon {
+    float: left;
+    color: transparent;
+}
+
+.rating label:last-child .icon {
+    color: #ccc;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+    color: #ffd700;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #ccc;
+    text-shadow: 0 0 5px #ffd700;
+}
+
+/* Hide old star rating classes */
+.star-rating, .star-input {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .reviews-page {
+        padding: 2rem 1rem;
+    }
+    
+    .reviews-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .leave-review {
+        padding: 2rem;
+    }
+    
+    .service-categories {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Star Rating System - Updated */
+.star-rating {
+    margin: 10px 0;
+}
+
+.star-input {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 5px;
+}
+
+.star-input input {
+    display: none;
+}
+
+.star-input label {
+    cursor: pointer;
+}
+
+.star-input label i {
+    font-size: 24px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.star-input input:checked ~ label i,
+.star-input label:hover ~ label i,
+.star-input label:hover i {
+    color: #ffd700;
+}
+
+/* Simple Star Rating */
+.simple-rating {
+    margin: 20px 0;
+}
+
+.stars {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+    transition: all 0.2s ease;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffa904;
+}
+
+/* Hide old rating system */
+.rating {
+    display: none;
 } 
