@@ -742,9 +742,9 @@ footer {
 .about-team .team-member-header {
     padding: 0 !important;
     background: linear-gradient(135deg, #3498db, #2c3e50) !important;
-    height: 120px !important;
+    height: 200px !important;
     position: relative !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     width: 100% !important;
 }
 
@@ -772,7 +772,7 @@ footer {
     border: 6px solid white !important;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1) !important;
     position: absolute !important;
-    bottom: -75px !important;
+    bottom: -60px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
@@ -794,6 +794,7 @@ footer {
     border-top: none !important;
     position: relative !important;
     text-align: center !important;
+    margin-top: 0 !important;
 }
 
 .about-team .team-info::after {
