@@ -710,59 +710,99 @@ footer {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .team-member {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .team-member:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.team-member-header {
+    padding: 1.5rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
 }
 
 .team-member img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    object-fit: contain;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #f8f9fa;
-    padding: 5px;
 }
 
 .team-member:hover img {
     transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .team-member h3 {
     color: #2c3e50;
-    margin: 1rem 0 0.5rem;
-    padding: 0 1rem;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+    text-align: center;
 }
 
 .team-member .position {
     color: #3498db;
-    font-weight: 500;
-    padding: 0 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
 }
 
-.team-member .bio {
+.team-bio {
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.team-bio p {
     color: #666;
-    padding: 0 1rem 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
 }
 
-.team-member .email {
+.team-contact {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.team-contact p {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.team-contact i {
     color: #3498db;
-    padding: 0 1rem 1rem;
-    font-weight: 500;
+    width: 20px;
+    text-align: center;
+    margin-right: 0.5rem;
 }
 
 .about-certifications {
@@ -820,7 +860,8 @@ footer {
     }
 
     .team-member img {
-        height: 250px;
+        height: 180px;
+        width: 180px;
     }
 
     .about-content {
