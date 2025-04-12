@@ -19,7 +19,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://highmountainmechanical.net/reviews.html">
     
-    <link rel="stylesheet" href="css/style.css?v=1.4.20">
+    <link rel="stylesheet" href="css/style.css?v=1.5.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Firebase SDK -->
@@ -238,11 +238,38 @@
     </footer>
 
 
-    <script src="js/main.js?v=1.4.07"></script>
+    <script src="js/main.js?v=1.5.1"></script>
     <script src="js/reviews.js" type="module"></script>
     <script>
         // Update the year dynamically
         document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Update the overall rating stars based on the rating
+        function updateOverallRatingStars(rating) {
+            const starsContainer = document.querySelector('.rating-stars');
+            starsContainer.innerHTML = '';
+            
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement('i');
+                star.className = i <= rating ? 'fas fa-star' : 'far fa-star';
+                star.style.color = '#ffa904';
+                star.style.marginRight = '8px';
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Initialize with 5 stars (will be updated when reviews load)
+        updateOverallRatingStars(5);
+        
+        // Add hover effect to the rating form stars
+        document.querySelectorAll('.star-rate label').forEach(label => {
+            label.addEventListener('mouseover', () => {
+                label.querySelector('i').style.transform = 'scale(1.2)';
+            });
+            label.addEventListener('mouseout', () => {
+                label.querySelector('i').style.transform = 'scale(1)';
+            });
+        });
     </script>
 </body>
 </html> 
