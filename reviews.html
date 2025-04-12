@@ -21,6 +21,31 @@
     
     <link rel="stylesheet" href="css/style.css?v=1.4.20">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+        import { getFirestore } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyA14z5a4Dixw4-tO39YKrQRUCygWcZAjP0",
+            authDomain: "high-mountain-mech.firebaseapp.com",
+            projectId: "high-mountain-mech",
+            storageBucket: "high-mountain-mech.firebasestorage.app",
+            messagingSenderId: "350754743325",
+            appId: "1:350754743325:web:b494afab1573520a2392f4"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        window.firebase = {
+            db: getFirestore(app),
+            auth: getAuth(app)
+        };
+    </script>
+    
     <style>
         .star-rate {
             display: inline-flex;
@@ -146,80 +171,31 @@
             <div class="rating-count">Based on 15 reviews</div>
         </div>
 
-        <div class="reviews-list">
-            <div class="review-item">
-                <div class="review-header">
-                    <div class="reviewer-info">
-                        <h3>John D.</h3>
-                        <div class="rating-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="review-date">March 15, 2024</div>
-                </div>
-                <p class="review-content">High Mountain Mechanical provided excellent service when our AC went out during a heatwave. They were prompt, professional, and fixed the issue quickly. Highly recommend!</p>
-            </div>
-
-            <div class="review-item">
-                <div class="review-header">
-                    <div class="reviewer-info">
-                        <h3>Sarah M.</h3>
-                        <div class="rating-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="review-date">March 10, 2024</div>
-                </div>
-                <p class="review-content">The team at High Mountain Mechanical installed our new heating system and did an amazing job. They were clean, efficient, and explained everything clearly. Great experience!</p>
-            </div>
-
-            <div class="review-item">
-                <div class="review-header">
-                    <div class="reviewer-info">
-                        <h3>Mike R.</h3>
-                        <div class="rating-stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="review-date">March 5, 2024</div>
-                </div>
-                <p class="review-content">Regular maintenance service was thorough and professional. The technician was knowledgeable and took time to explain everything. Will definitely use them again!</p>
-            </div>
+        <div class="reviews-list" id="reviews-container">
+            <!-- Reviews will be dynamically loaded here -->
         </div>
 
         <div class="leave-review">
-            <h2>Share Your Experience</h2>
-            <p>We value your feedback! Please take a moment to share your experience with us.</p>
-            <form class="review-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <h2>Leave a Review</h2>
+            <p>Share your experience with High Mountain Mechanical</p>
+            <form id="review-form" class="review-form">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label>Rating</label>
+                    <label for="rating">Rating</label>
                     <div class="star-rate">
-                        <input type="radio" id="rate-5" name="rating" value="5" required>
-                        <label for="rate-5"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="rate-4" name="rating" value="4">
-                        <label for="rate-4"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="rate-3" name="rating" value="3">
-                        <label for="rate-3"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="rate-2" name="rating" value="2">
-                        <label for="rate-2"><i class="fas fa-star"></i></label>
-                        <input type="radio" id="rate-1" name="rating" value="1">
-                        <label for="rate-1"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2"><i class="fas fa-star"></i></label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1"><i class="fas fa-star"></i></label>
                     </div>
                 </div>
                 <div class="form-group">
@@ -262,6 +238,11 @@
     </footer>
 
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=1.4.07"></script>
+    <script src="js/reviews.js" type="module"></script>
+    <script>
+        // Update the year dynamically
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html> 
