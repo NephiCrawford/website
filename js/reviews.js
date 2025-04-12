@@ -1,4 +1,4 @@
-import { collection, addDoc, getDocs, query, orderBy, serverTimestamp, limit } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
+import { collection, addDoc, getDocs, query, orderBy, serverTimestamp, limit } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
 
 // Get Firebase instances from window object
 const { db } = window.firebase;
